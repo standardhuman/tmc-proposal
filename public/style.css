@@ -795,6 +795,9 @@ strong {
   padding: 2.5rem;
   border-radius: 12px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview-link {
