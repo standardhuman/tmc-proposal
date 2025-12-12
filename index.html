@@ -15,19 +15,18 @@
       <div class="nav-content">
         <span class="nav-logo">TMC Website Proposal</span>
         <div class="nav-links">
+          <a href="#preview">Preview</a>
           <a href="#summary">Summary</a>
+          <a href="#feedback">Feedback</a>
           <a href="#vision">Vision</a>
-          <a href="#approach">Approach</a>
-          <a href="#design">Design</a>
           <a href="#comparison">Comparison</a>
-          <a href="#prd">Full PRD</a>
         </div>
       </div>
     </nav>
 
     <header class="hero">
       <div class="hero-content">
-        <p class="hero-label">Proposal for the Vision Body</p>
+        <p class="hero-label" style="background: #4A5D4A; padding: 0.5rem 1rem; border-radius: 4px; display: inline-block;">✓ Working Prototype Ready for Review</p>
         <h1>Redesigning<br>themenscircle.com</h1>
         <p class="hero-subtitle">A modern, low-maintenance website that serves both curious men and active members — powered by the Google Sheets you already use.</p>
         <div class="hero-meta">
@@ -35,10 +34,79 @@
           <span class="divider">•</span>
           <span>December 2025</span>
         </div>
+        <a href="#preview" class="btn-preview" style="display: inline-block; margin-top: 1.5rem; background: var(--ember); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Preview the Test Site →</a>
       </div>
     </header>
 
     <main>
+      <!-- Preview Section -->
+      <section id="preview" class="section section-preview">
+        <div class="section-content">
+          <h2>🔥 Preview the Test Site</h2>
+          <p class="section-intro">The prototype is live and connected to a copy of the TMC roster. Test it out and share your feedback.</p>
+
+          <div class="preview-box">
+            <div class="preview-main">
+              <a href="https://app-sailorskills.vercel.app" target="_blank" class="preview-link">
+                <span class="preview-url">app-sailorskills.vercel.app</span>
+                <span class="preview-arrow">→</span>
+              </a>
+              <p class="preview-note">Opens in a new tab</p>
+            </div>
+
+            <div class="preview-instructions">
+              <h4>How to Access the Member Area</h4>
+              <ol>
+                <li>Click the <strong>"Member Login"</strong> button on the homepage</li>
+                <li>Enter your email address (must be in the TMC roster)</li>
+                <li>Check your email for a magic link</li>
+                <li>Click the link — you're in!</li>
+              </ol>
+              <p class="preview-tip"><strong>Tip:</strong> Check spam/junk if you don't see the email within a minute.</p>
+            </div>
+          </div>
+
+          <div class="features-available">
+            <h4>What You Can Test</h4>
+            <div class="feature-grid">
+              <div class="feature-item done">
+                <span class="feature-status">✓</span>
+                <div>
+                  <strong>Member Directory</strong>
+                  <p>Search members, filter by team, click to see full profiles with purpose statements and intro letters</p>
+                </div>
+              </div>
+              <div class="feature-item done">
+                <span class="feature-status">✓</span>
+                <div>
+                  <strong>Resources Library</strong>
+                  <p>Access TMC documents — handbooks, guides, and essential documents</p>
+                </div>
+              </div>
+              <div class="feature-item done">
+                <span class="feature-status">✓</span>
+                <div>
+                  <strong>Announcements</strong>
+                  <p>View recent updates and news (sample data for now)</p>
+                </div>
+              </div>
+              <div class="feature-item done">
+                <span class="feature-status">✓</span>
+                <div>
+                  <strong>Public Contact Form</strong>
+                  <p>Test the contact form on the public homepage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="data-note">
+            <h4>About the Test Data</h4>
+            <p>The site is connected to a <strong>copy</strong> of the TMC roster, not the live one. Your intro letter and profile information come directly from the spreadsheet. Once approved, we'll connect to the production roster.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Summary Section -->
       <section id="summary" class="section">
         <div class="section-content">
@@ -78,6 +146,120 @@
               <p>Administrators continue working exactly as they do now. The website automatically reflects current information.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Feedback Section -->
+      <section id="feedback" class="section section-alt section-feedback">
+        <div class="section-content">
+          <h2>Share Your Feedback</h2>
+          <p class="section-intro">After testing the site, please take 3-5 minutes to share your thoughts. Your feedback will directly shape the final product.</p>
+
+          <form id="feedback-form" class="feedback-form">
+            <!-- Overall Impression -->
+            <div class="feedback-group">
+              <h4>1. Overall Impression</h4>
+              <label class="feedback-question">How would you rate your overall experience with the test site?</label>
+              <div class="rating-scale">
+                <label><input type="radio" name="overall" value="1" required> 1 - Needs significant work</label>
+                <label><input type="radio" name="overall" value="2"> 2 - Has potential but needs changes</label>
+                <label><input type="radio" name="overall" value="3"> 3 - Good, minor adjustments needed</label>
+                <label><input type="radio" name="overall" value="4"> 4 - Very good, ready with small tweaks</label>
+                <label><input type="radio" name="overall" value="5"> 5 - Excellent, ready to go</label>
+              </div>
+            </div>
+
+            <!-- Look & Feel -->
+            <div class="feedback-group">
+              <h4>2. Look & Feel</h4>
+              <label class="feedback-question">Does the visual design feel right for The Men's Circle?</label>
+              <div class="rating-scale">
+                <label><input type="radio" name="design" value="too_soft" required> Too soft / not masculine enough</label>
+                <label><input type="radio" name="design" value="just_right"> Just right — grounded and authentic</label>
+                <label><input type="radio" name="design" value="too_harsh"> Too harsh / aggressive</label>
+                <label><input type="radio" name="design" value="other"> Other (please explain below)</label>
+              </div>
+              <textarea name="design_comments" placeholder="Any specific thoughts on colors, typography, or imagery..." rows="2"></textarea>
+            </div>
+
+            <!-- Member Directory -->
+            <div class="feedback-group">
+              <h4>3. Member Directory</h4>
+              <label class="feedback-question">How useful is the member directory and profile view?</label>
+              <div class="rating-scale">
+                <label><input type="radio" name="directory" value="1" required> 1 - Not useful</label>
+                <label><input type="radio" name="directory" value="2"> 2 - Somewhat useful</label>
+                <label><input type="radio" name="directory" value="3"> 3 - Useful</label>
+                <label><input type="radio" name="directory" value="4"> 4 - Very useful</label>
+                <label><input type="radio" name="directory" value="5"> 5 - Essential — I'd use this regularly</label>
+              </div>
+              <textarea name="directory_comments" placeholder="What would make the directory more valuable? Missing info? Better organization?" rows="2"></textarea>
+            </div>
+
+            <!-- Intro Letters -->
+            <div class="feedback-group">
+              <h4>4. Introduction Letters</h4>
+              <label class="feedback-question">The member profiles now show each man's intro letter. How do you feel about this?</label>
+              <div class="rating-scale">
+                <label><input type="radio" name="intros" value="love" required> Love it — great way to know each other</label>
+                <label><input type="radio" name="intros" value="like"> Like it, but maybe make it optional</label>
+                <label><input type="radio" name="intros" value="neutral"> Neutral — doesn't matter to me</label>
+                <label><input type="radio" name="intros" value="concern"> Concerned about privacy</label>
+                <label><input type="radio" name="intros" value="against"> Against — intros should stay private</label>
+              </div>
+            </div>
+
+            <!-- Login Experience -->
+            <div class="feedback-group">
+              <h4>5. Login Experience</h4>
+              <label class="feedback-question">How smooth was the magic link login process?</label>
+              <div class="rating-scale">
+                <label><input type="radio" name="login" value="smooth" required> Smooth — worked perfectly</label>
+                <label><input type="radio" name="login" value="minor_issue"> Minor hiccup but got in</label>
+                <label><input type="radio" name="login" value="confusing"> Confusing — needed help</label>
+                <label><input type="radio" name="login" value="failed"> Couldn't log in</label>
+              </div>
+              <textarea name="login_comments" placeholder="Any issues with the login process?" rows="2"></textarea>
+            </div>
+
+            <!-- Missing Features -->
+            <div class="feedback-group">
+              <h4>6. What's Missing?</h4>
+              <label class="feedback-question">What features or information would make this site more valuable for you?</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="missing" value="photos"> Member photos</label>
+                <label><input type="checkbox" name="missing" value="calendar"> Event calendar</label>
+                <label><input type="checkbox" name="missing" value="messaging"> Direct messaging between members</label>
+                <label><input type="checkbox" name="missing" value="history"> TMC history / founding story</label>
+                <label><input type="checkbox" name="missing" value="pillars"> Pillar information</label>
+                <label><input type="checkbox" name="missing" value="alumni"> Alumni / former members section</label>
+              </div>
+              <textarea name="missing_other" placeholder="Other features you'd like to see..." rows="2"></textarea>
+            </div>
+
+            <!-- Bugs & Issues -->
+            <div class="feedback-group">
+              <h4>7. Bugs or Issues</h4>
+              <label class="feedback-question">Did you encounter any bugs, broken features, or confusing behavior?</label>
+              <textarea name="bugs" placeholder="Please describe any issues you found..." rows="3"></textarea>
+            </div>
+
+            <!-- Open Feedback -->
+            <div class="feedback-group">
+              <h4>8. Anything Else?</h4>
+              <label class="feedback-question">Any other thoughts, concerns, or suggestions?</label>
+              <textarea name="other" placeholder="Share freely..." rows="3"></textarea>
+            </div>
+
+            <!-- Contact -->
+            <div class="feedback-group">
+              <h4>Your Name (optional)</h4>
+              <input type="text" name="name" placeholder="So I can follow up if needed" class="feedback-input">
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Feedback</button>
+            <div id="feedback-message"></div>
+          </form>
         </div>
       </section>
 
@@ -154,6 +336,12 @@
               <span class="flow-number">3</span>
               <span class="flow-text">Members see current info</span>
             </div>
+          </div>
+
+          <div class="fallback-box">
+            <h4>🛡️ The Beautiful Fallback</h4>
+            <p>Here's what makes this approach truly low-risk: <strong>if anything goes wrong with the website — or if I disappear, or no one can maintain it — you simply go back to using Google Sheets exactly as you do now.</strong></p>
+            <p class="subtle">The website is just a window into your existing data. The sheets remain the source of truth. If the window breaks, the data is still there, safe and accessible. Your current workflow continues uninterrupted.</p>
           </div>
         </div>
       </section>
@@ -564,5 +752,69 @@
         <p class="footer-author">— Brian, December 2025</p>
       </div>
     </footer>
+
+    <script>
+      // Feedback form handler
+      const feedbackForm = document.getElementById('feedback-form');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      if (feedbackForm) {
+        feedbackForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const submitBtn = feedbackForm.querySelector('.btn-submit');
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Submitting...';
+          feedbackMessage.className = '';
+          feedbackMessage.textContent = '';
+
+          const formData = new FormData(feedbackForm);
+
+          // Collect checkbox values for missing features
+          const missingFeatures = [];
+          feedbackForm.querySelectorAll('input[name="missing"]:checked').forEach(cb => {
+            missingFeatures.push(cb.value);
+          });
+
+          const data = {
+            name: formData.get('name') || 'Anonymous',
+            overall: formData.get('overall'),
+            design: formData.get('design'),
+            designComments: formData.get('design_comments'),
+            directory: formData.get('directory'),
+            directoryComments: formData.get('directory_comments'),
+            intros: formData.get('intros'),
+            login: formData.get('login'),
+            loginComments: formData.get('login_comments'),
+            missingFeatures: missingFeatures,
+            missingOther: formData.get('missing_other'),
+            bugs: formData.get('bugs'),
+            other: formData.get('other')
+          };
+
+          try {
+            const response = await fetch('https://app-sailorskills.vercel.app/api/feedback', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+              feedbackMessage.className = 'success';
+              feedbackMessage.innerHTML = '<strong>Thank you!</strong> Your feedback has been received. Brian will review it and follow up if needed.';
+              feedbackForm.reset();
+            } else {
+              throw new Error('Submission failed');
+            }
+          } catch (error) {
+            feedbackMessage.className = 'error';
+            feedbackMessage.innerHTML = 'Something went wrong. Please try again or email Brian directly.';
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Feedback';
+          }
+        });
+      }
+    </script>
   </body>
 </html>
